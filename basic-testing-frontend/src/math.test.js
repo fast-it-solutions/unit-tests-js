@@ -1,10 +1,10 @@
-import { it, expect } from "vitest";
+import { it, expect } from 'vitest';
 
-import { add } from "./math";
+import { add } from './math';
 
-it("should summarize all numbers values in an array", () => {
+it('should summarize all number values in an array', () => {
   // Arrange
-  const numbers = [1, 2, 3];
+  const numbers = [1, 2];
 
   // Act
   const result = add(numbers);
@@ -17,16 +17,16 @@ it("should summarize all numbers values in an array", () => {
   expect(result).toBe(expectedResult);
 });
 
-it("should yield NaN if a least one invalid number is provided", () => {
-  const inputs = ["invalid", 1];
+it('should yield NaN if a least one invalid number is provided', () => {
+  const inputs = ['invalid', 1];
 
   const result = add(inputs);
 
   expect(result).toBeNaN();
 });
 
-it("should yield a correct sum if an array of numeric string values is provided", () => {
-  const numbers = ["1", "2"];
+it('should yield a correct sum if an array of numeric string values is provided', () => {
+  const numbers = ['1', '2'];
 
   const result = add(numbers);
 
@@ -37,7 +37,7 @@ it("should yield a correct sum if an array of numeric string values is provided"
   expect(result).toBe(expectedResult);
 });
 
-it("should yield 0 if an empty array is provided", () => {
+it('should yield 0 if an empty array is provided', () => {
   const numbers = [];
 
   const result = add(numbers);
@@ -45,14 +45,14 @@ it("should yield 0 if an empty array is provided", () => {
   expect(result).toBe(0);
 });
 
-it("should throw an error if no value is passed into the function", () => {
+it('should throw an error if no value is passed into the function', () => {
   const resultFn = () => {
     add();
   };
   expect(resultFn).toThrow(/is not iterable/);
 });
 
-it("should throw an error if provided with multiple arguments instead of an array", () => {
+it('should throw an error if provided with multiple arguments instead of an array', () => {
   const num1 = 1;
   const num2 = 2;
 

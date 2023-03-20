@@ -1,6 +1,7 @@
-import { validateStringNotEmpty, validateNumber } from "./validation.js";
+import { validateStringNotEmpty, validateNumber } from './validation.js';
 
 export function transformToNumber(value) {
+  // return NaN;
   return +value;
 }
 
